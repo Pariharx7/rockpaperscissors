@@ -1,0 +1,73 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body{
+    background: url(./images/bg-rps.jpg);
+    background-size: cover;
+}
+.heading{
+    text-align: center;
+    padding:10px;
+    font-weight: bolder;
+    font-size: 4rem;
+}
+.running-score{
+    /* border: 1px solid black; */
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    height: 100px;
+    width: auto;
+    padding: 2rem;
+    font-size: larger;
+    font-weight: bolder;
+}
+.results, .winner-result, .play-again{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    /* border: 1px solid black; */
+    width: auto;
+    font-size: larger;
+    font-weight: bolder;
+    margin: 3rem;
+
+}
+
+
+
+
+.container-images, .container-buttons{
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+}
+
+.container-images img{
+    margin: 2vw;
+
+    height: 222px;
+    width: 240px;
+    border-radius: 45px;
+    
+}
+
+.container-buttons button{
+    
+    
+    height: 50px;
+    width: 7rem;
+    border-radius: 22%;
+    position: inherit;
+    margin:0 6vw;
+    font-size: medium;
+    font-weight: 700;
+    background-color: sandybrown;
+    color: black;
+    border: 1px solid sandybrown;
+
+
+}

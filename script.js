@@ -25,6 +25,14 @@ const compScoreSpan = document.querySelector('.comp-score');
 const winnerResult = document.querySelector('.winner-result');
 const playAgain = document.querySelector('.play-again');
 
+const rockButton = document.querySelector('.rock-button');
+const papeButton = document.querySelector('.paper-button');
+const scisButton = document.querySelector('.scissors-button');
+
+const buttons = document.querySelectorAll('button');
+
+
+
 function playSingleRound(playerChoice,computerMove){
    
 
@@ -68,11 +76,19 @@ function playSingleRound(playerChoice,computerMove){
 
 
 
+function disableButton() {
+    rockButton.disabled = true;
+    papeButton.disabled = true;
+    scisButton.disabled = true;
+   
+}
+
 
 
 const newGame = document.createElement('div');
 newGame.textContent = `Play again`;
 newGame.classList.add('button', 'refresh');
+
 
 function refreshPage() {
     window.location.reload(true);
@@ -86,22 +102,26 @@ const updateScore = (playerScore, compScore) => {
 
 function checkForWinner(playerScore, compScore){
     if(playerScore === 5){
+        disableButton();
         const h2 = document.createElement('h2');
         h2.classList.add('player-won');
         h2.innerText = `You won by ${playerScore} to ${compScore} .Great Job Beating the Computer`;
         winnerResult.append(h2);
         playAgain.append(newGame);
+         
     }
     if(compScore === 5){
+        disableButton();
         const h2 = document.createElement('h2');
         h2.classList.add('computer-won');
         h2.innerText = `You lost by ${compScore} to ${playerScore} .Computer was clever than you this time`;
         winnerResult.append(h2);
         playAgain.append(newGame);
+               
     }
 }
 
-const buttons = document.querySelectorAll('button');
+
 
 
 buttons.forEach( button => button.addEventListener('click' ,() =>{
